@@ -5,4 +5,7 @@ import org.mapstruct.MappingConstants;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface TaskMapper {
+	Task taskPostDtoToTaskEntity(TaskDto.Post post);
+
+	TaskDto.Response taskEntityToTaskResponseDto(Task task);
 }
